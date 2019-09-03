@@ -5,7 +5,7 @@ import java.io.FileReader;
 public class controller {
 
     String[] strArr;
-    String[] arithmatic = {"+", "-", ".", "/"};
+    String[] arithmatic = {"+", "-", ".", "/","%"};
     String[] logical = {"&&", "||", "!"};
     String[] relation = {"==", "!=", ">", "<", ">=", "<="};
     String[] bitwise = {"|", "^", "~", "<<", ">>", ">>>", "<<<"};
@@ -81,7 +81,7 @@ public class controller {
                         String[] array = options[i];
                         for (int j = 0; j < strArr.length; j++) {
                             for (int k = 0; k < array.length; k++) {
-                                if (array[k].equals(strArr[j])) {
+                                if (array[k].equals(strArr[j])  || strArr[j].contains(array[k])) {
                                     ++complexity;
                                 }
                             }
